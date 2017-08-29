@@ -2,5 +2,109 @@
 
 html {
   font-family: Interface, sans-serif;
-  background-color: aliceblue;
+}
+
+.page-container {
+    overflow: hidden;
+}
+
+.sidebar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 25%;
+    min-width: 350px;
+    border-right: solid 1px rgb(214, 215, 215);
+}
+
+.sidebar-head {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90px;
+
+    background-color: rgba(255,255,255,0.2);
+    border-bottom: solid 1px rgb(214,215,215);
+    -webkit-backdrop-filter: blur(25px);
+    z-index: 2;
+}
+
+.sidebar-head > h1 {
+    margin-top: 25px;
+    line-height: 3rem;
+    padding-bottom: 15px;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    font-size: 3rem;
+    color: #454ADE;
+    border-bottom: solid 3px #454ADE;
+}
+
+.sidebar-content {
+    height: 100%;
+    width: 100%;
+
+    z-index: -1;
+}
+
+.sidebar-nav {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+
+    padding: 0 20px 0 20px;
+    box-sizing: border-box;
+    border-top: solid 1px rgb(214,215,215);
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-content: space-between;
+    align-items: center;
+
+    -webkit-backdrop-filter: blur(25px);
+
+    z-index: 2;
+}
+
+.nav-icon {
+    height: 35px;
+    width: 35px;
+    box-sizing: border-box;
+}
+
+.active {
+    border-top: solid 3px #454ADE;
+    height: 60px;
+}
+
+.nav-recent {
+    background: url(../media/nav-icons/nav_recent_active.svg) no-repeat center;
+    background-size: contain;
+}
+
+.nav-popular {
+    background: url(../media/nav-icons/nav_popular_inactive.svg) no-repeat center;
+    background-size: contain;
+}
+
+.nav-categories {
+    background: url(../media/nav-icons/nav_categories_inactive.svg) no-repeat center;
+    background-size: contain;
+}
+
+.nav-search {
+    background: url(../media/nav-icons/nav_search_inactive.svg) no-repeat center;
+    background-size: contain;
+}
+
+.nav-new {
+    background: url(../media/nav-icons/nav_new_inactive.svg) no-repeat center;
+    background-size: contain;
 }

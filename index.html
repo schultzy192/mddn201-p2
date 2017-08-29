@@ -3,34 +3,48 @@
 <html lang="en">
 
 <head>
-  <meta charset="utf-8">
+    <meta charset="utf-8">
 
-  <title>Yarn</title>
-  <meta name="description" content="Free and open group chats about anything and everything." />
-  <meta name="author" content="Stefan Schultz">
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Yarn</title>
+    <meta name="description" content="Free and open group chats about anything and everything." />
+    <meta name="author" content="Stefan Schultz">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
-  <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" />
+    <link rel="stylesheet" href="css/main.css">
 
 </head>
 
 <body>
+    <div class="page-container">
+        <div class="sidebar">
 
-  <div class="sidebar">
-    <div class="sidebar-head">
+            <div class="sidebar-head">
+                <h1>Recent</h1>
+            </div>
+
+            <div class="sidebar-content">
+                <div class="active-yarn">
+                    <div class="yarn-title">
+                        <h1></h1>
+                    </div>
+                </div>
+            </div>
+
+            <div class="sidebar-nav">
+                <div class="nav-recent nav-icon active"></div>
+                <div class="nav-popular nav-icon inactive"></div>
+                <div class="nav-categories nav-icon inactive"></div>
+                <div class="nav-search nav-icon inactive"></div>
+                <div class="nav-new nav-icon inactive"></div>
+            </div>
+
+        </div>
 
     </div>
-    <div class="sidebar-content">
-        <h1>Hello.</h1>
-    </div>
-    <div class="sidebar-nav">
 
-    </div>
-  </div>
-
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
-  <script src="scripts/script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+    <script src="scripts/script.js"></script>
 </body>
 
 </html>
