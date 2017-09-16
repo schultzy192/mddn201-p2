@@ -117,6 +117,16 @@ html {
     text-align: center;
 }
 
+.thread-flag {
+    display: inline-block;
+    border: solid 3px rgb(69, 74, 222);
+    border-radius: 4px;
+    padding: 2px 6px 2px 6px;
+    color: rgb(69, 74, 222);
+    font-weight: 900;
+    text-align: center;
+}
+
 .sidebar-nav {
     position: absolute;
     bottom: 0;
@@ -228,10 +238,12 @@ html {
 }
 
 .inline-thread {
-    margin-left: 2.5%;
-    width: 95%;
-    background-color: aqua;
-    border-top: 
+    margin-left: 5%;
+    width: 85%;
+    background-color: cyan;
+    border-top: solid 1px rgb(69, 74, 222);
+    border-bottom: solid 1px rgb(69, 74, 222);
+    padding: 0px 2.5% 0px 2.5%;
 }
 
 .received-message {
