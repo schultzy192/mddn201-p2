@@ -53,6 +53,7 @@ html {
     left: 0;
     bottom: 60px;
     width: 100%;
+    overflow-y: scroll;
 
     z-index: -1;
 }
@@ -128,10 +129,11 @@ html {
 }
 
 .sidebar-nav {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     left: 0;
-    right: 0;
+    width: 25%;
+    min-width: 350px;
     height: 60px;
 
     padding: 0 20px 0 20px;
@@ -148,7 +150,7 @@ html {
 
     -webkit-backdrop-filter: blur(25px);
 
-    z-index: 2;
+    z-index: 20;
 }
 
 .nav-icon {
@@ -234,7 +236,8 @@ html {
     margin-top: 85px;
     margin-left: 15px;
     max-width: 75%;
-    bottom: 60px
+    bottom: 60px;
+    overflow-y: scroll;
 }
 
 .inline-thread {
@@ -263,9 +266,10 @@ html {
 .yarn-send {
     position: absolute;
     bottom: 0;
-    left: 0;
     right: 0;
     height: 60px;
+    width: 75%;
+    max-width: calc(100% - 350px);
 
     padding: 0 15px 0 15px;
     box-sizing: border-box;
