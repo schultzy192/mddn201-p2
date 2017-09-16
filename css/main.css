@@ -2,7 +2,7 @@
 
 html {
   font-family: Interface, sans-serif;
-  font-size: 1em;
+  font-size: 16px;
 }
 
 .page-container {
@@ -12,6 +12,7 @@ html {
 /*  --- Sidebar Styling --- */
 
 .sidebar {
+    background-color: #FFF;
     position: absolute;
     top: 0;
     left: 0;
@@ -26,31 +27,94 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    height: 90px;
+    height: 75px;
 
-    background-color: rgba(255,255,255,0.2);
+    background-color: rgba(250,250,250,0.2);
     border-bottom: solid 1px rgb(214,215,215);
     -webkit-backdrop-filter: blur(25px);
     z-index: 2;
 }
 
 .sidebar-head > h1 {
-    margin-top: 25px;
+    margin-top: 15px;
+    padding-bottom: 10px;
     line-height: 48px;
-    padding-bottom: 15px;
     margin-left: 25px;
     margin-right: 25px;
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #454ADE;
     border-bottom: solid 3px #454ADE;
 }
 
 .sidebar-content {
-    height: 100%;
+    margin-top: 75px;
+    margin-bottom: 60px;
+    left: 0;
+    bottom: 60px;
     width: 100%;
 
     z-index: -1;
+}
+
+.sidebar-yarn {
+    margin-top: 0;
+    margin-bottom: 0;
+    height: 100px;
+    width: 100%;
+    display: flex;
+
+    border-top: solid 1px rgb(214,215,215);
+    border-bottom: solid 1px rgb(214,215,215);
+}
+
+.yarn-image {
+    margin-top: 10px;
+    margin-left: 25px;
+    border-radius: 12px;
+    border: solid 1px rgb(214,215,215);
+    box-shadow: 2px 0 10px 0 rgba(80,90,90,0.5);
+    background-color: red;
+    width: 80px;
+    height: 80px;
+    display: inline-block;
+}
+
+.yarn-details {
+    margin-left: 20px;
+
+}
+
+.sidebar-yarn h3 {
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-size: 1.5rem;
+    color: rgb(40,50,45);
+}
+
+.yarn-details > div {
+    margin-top: 0;
+}
+
+.spoiler-flag {
+    display: inline-block;
+    border: solid 3px rgb(242,153,74);
+    border-radius: 4px;
+    padding: 2px 6px 2px 6px;
+    color: rgb(242,153,74);
+    font-weight: 900;
+    text-align: center;
+
+}
+
+.nsfw-flag {
+    display: inline-block;
+    border: solid 3px rgb(235,87,87);
+    border-radius: 4px;
+    padding: 2px 6px 2px 6px;
+    color: rgb(235,87,87);
+    font-weight: 900;
+    text-align: center;
 }
 
 .sidebar-nav {
@@ -63,6 +127,7 @@ html {
     padding: 0 20px 0 20px;
     box-sizing: border-box;
     border-top: solid 1px rgb(214,215,215);
+    background-color: rgba(250,250,250, 0.2);
 
     display: flex;
     flex-direction: row;
@@ -132,27 +197,55 @@ html {
     top: 0;
     left: 0;
     right: 0;
-    height: 90px;
+    height: 75px;
 
     border-bottom: solid 1px rgb(214,215,215);
     border-left: solid 1px rgb(214,215,215);
-    background-color: rgba(255,255,255,0.75);
+    background-color: rgba(250,250,250, 0.2);
     -webkit-backdrop-filter: blur(10px);
 
     z-index: 2;
 }
 
 .yarn-title > h1 {
-    margin-top: 25px;
+    margin-top: 15px;
     line-height: 48px;
-    padding-bottom: 15px;
+    padding-bottom: 10px;
     margin-left: 25px;
     margin-right: 25px;
 
-    font-size: 3rem;
+    font-size: 2.5rem;
     color: #454ADE;
     border-bottom: solid 3px #454ADE;
     z-index: 2;
+}
+
+.yarn-thread {
+    margin-top: 85px;
+    margin-left: 15px;
+    max-width: 75%;
+    bottom: 60px
+}
+
+.inline-thread {
+    margin-left: 2.5%;
+    width: 95%;
+    background-color: aqua;
+    border-top: 
+}
+
+.received-message {
+    background-color: rgb(221, 221, 238);
+    margin-bottom: 30px;
+    padding: 15px 20px 15px 20px;
+    border-radius: 100px;
+    line-height: 1rem;
+}
+
+.received-message > p {
+    padding: 0;
+    margin: 0;
+    color: rgb(35, 35, 41);
 }
 
 .yarn-send {
@@ -164,6 +257,7 @@ html {
 
     padding: 0 15px 0 15px;
     box-sizing: border-box;
+    background-color: rgba(250,250,250, 0.2);
     border-left: solid 1px rgb(214,215,215);
     border-top: solid 1px rgb(214,215,215);
 
@@ -188,7 +282,7 @@ html {
 }
 
 .message-field {
-    width: 80%;
+    width: calc(100% - 110px);
     height: 38px;
     border: solid 1px rgb(214,215,215);
     border-radius: 12px;

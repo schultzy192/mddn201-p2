@@ -24,7 +24,16 @@
             </div>
 
             <div class="sidebar-content recent">
-
+                <div class="sidebar-yarn">
+                    <div class="yarn-image"></div>
+                    <div class="yarn-details">
+                        <h3>Game of Thrones</h3>
+                        <div class="yarn-flags">
+                            <h6 class="spoiler-flag">SPOILERS</h6>
+                            <h6 class="nsfw-flag">NSFW</h6>
+                        </div>
+                    </div>
+                </div>
             </div>
 
             <div class="sidebar-nav">
@@ -43,6 +52,15 @@
             </div>
 
             <div class="yarn-thread">
+                <div class="received-message">
+                    <p>Hello, there!</p>
+                </div>
+                </div>
+                <div class="inline-thread">
+                    <div class="received-message">
+                        <p>Hello, there!</p>
+                    </div>
+                </div>
             </div>
 
             <div class="yarn-send">
@@ -55,6 +73,20 @@
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+
+    <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+        apiKey: "AIzaSyCzdon6U_g7kIQw93KZUxwR0GXe1ru5PrM",
+        authDomain: "yarn-bb1fb.firebaseapp.com",
+        databaseURL: "https://yarn-bb1fb.firebaseio.com",
+        projectId: "yarn-bb1fb",
+        storageBucket: "yarn-bb1fb.appspot.com",
+        messagingSenderId: "573578001096"
+        };
+        firebase.initializeApp(config);
+    </script>
     <script src="scripts/script.js"></script>
 </body>
 
