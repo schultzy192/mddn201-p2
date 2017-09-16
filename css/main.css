@@ -241,9 +241,10 @@ html {
 }
 
 .inline-thread {
-    margin-left: 5%;
-    width: 85%;
-    background-color: cyan;
+    margin-left: 25px;
+    margin-right: 25px;
+
+    background-color: rgb(245, 245, 251);
     border-top: solid 1px rgb(69, 74, 222);
     border-bottom: solid 1px rgb(69, 74, 222);
     padding: 0px 2.5% 0px 2.5%;
@@ -303,6 +304,7 @@ html {
     border: solid 1px rgb(214,215,215);
     border-radius: 12px;
     background-color: rgba(233, 236, 244, 0.35);
+    padding: 0 10px 0 10px;
     -webkit-backdrop-filter: blur(25px);
 }
 
@@ -312,10 +314,4 @@ html {
     box-sizing: border-box;
     background: url(../media/send_icon.svg) no-repeat center;
     background-size: contain;
-}
-
-::-webkit-input-placeholder {
-    padding-left: 15px;
-    font-size: 1rem;
-    font-family: Interface, sans-serif;
 }
