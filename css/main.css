@@ -17,8 +17,8 @@ html {
     top: 0;
     left: 0;
     bottom: 0;
-    width: 25%;
-    min-width: 350px;
+    width: 450px;
+    /*min-width: 350px;*/
     border-right: solid 1px rgb(214, 215, 215);
 }
 
@@ -67,6 +67,10 @@ html {
 
     border-top: solid 1px rgb(214,215,215);
     border-bottom: solid 1px rgb(214,215,215);
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .yarn-image {
@@ -74,11 +78,40 @@ html {
     margin-left: 25px;
     border-radius: 12px;
     border: solid 1px rgb(214,215,215);
-    box-shadow: 2px 0 10px 0 rgba(80,90,90,0.5);
+    box-shadow: 0px 2px 10px 0 rgba(80,90,90,0.2);
     background-color: red;
     width: 80px;
     height: 80px;
     display: inline-block;
+
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.sidebar .star-wars > .yarn-image {
+    background-image: url(../media/vader.jpg);
+}
+
+.sidebar .graphic-design > .yarn-image {
+    background-image: url(../media/hand-drawing.jpg);
+}
+
+.sidebar .the-expanse > .yarn-image {
+    background-image: url(../media/expanse.jpg);
+    background-position: right;
+}
+
+.sidebar .the-joy-of-painting > .yarn-image {
+    background-image: url(../media/bobross.jpg);
+}
+
+.sidebar .argument-clinic > .yarn-image {
+    background-image: url(../media/angry-man.jpg);
+}
+
+.sidebar .active-yarn {
+    background-color: rgb(226, 226, 230);
 }
 
 .yarn-details {
@@ -132,8 +165,7 @@ html {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 25%;
-    min-width: 350px;
+    width: 450px;
     height: 60px;
 
     padding: 0 20px 0 20px;
@@ -197,17 +229,17 @@ html {
     bottom: 0;
     right: 0;
     width: 75%;
-    max-width: calc(100% - 350px);
+    max-width: calc(100% - 450px);
 }
 
 .active-yarn {
-
+    overflow-y: scroll;
 }
 
 .yarn-title {
-    position: absolute;
+    position: fixed;
     top: 0;
-    left: 0;
+    left: 450px;
     right: 0;
     height: 75px;
 
@@ -243,45 +275,111 @@ html {
 .inline-thread {
     margin-bottom: 8px;
     margin-top: 8px;
+    clear: both;
     float: left;
     width: 100%;
     background-color: rgb(245, 245, 251);
     border-top: solid 1px rgb(69, 74, 222);
     border-bottom: solid 1px rgb(69, 74, 222);
-    padding: 0px 2.5% 0px 2.5%;
+    padding: 0px 15px 10px 15px;
+    box-sizing: border-box;
+
+    overflow: hidden;
+    height: 3.5rem;
+
+    transition: 0.3s;
+}
+
+.inline-open {
+    position: absolute;
+    left: 25px;
+    right: 25px;
+    top: 75px;
+    bottom: 65px;
+    height: auto;
+    width: auto;
+    overflow: scroll;
+
+    transition: 0.3s;
+}
+
+.inline-arrow-spin {
+    transform: rotate(180deg);
+    transition: 0.2s;
+}
+
+.inline-header {
+    cursor: pointer;
+}
+
+.inline-header > .material-icons {
+    float: left;
+    margin-top: 2px;
+    margin-left: -10px;
+    margin-right: 15px;
+    font-size: 3rem;
+    color: rgb(69,74,222);
+    transition: 0.2s;
+}
+
+.inline-header > .thread-flag {
+    float: right;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.inline-header > .spoiler-flag {
+    float: right;
+    margin-top: 15px;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.inline-thread-title {
+    color: rgb(69,74,222);
+    font-size: 1.2rem;
+    float: left;
+    margin-top: 17px;
 }
 
 .received-message {
+    clear: both;
     float: left;
     background-color: rgb(221, 221, 238);
-    width: 75%;
+    width: fit-content;
+    max-width: 75%;
     margin-bottom: 8px;
     margin-top: 8px;
-    padding: 15px 20px 15px 20px;
+    padding: 8px 18px 8px 18px;
     border-radius: 25px;
-    line-height: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
     color: rgb(35, 35, 41);
 }
 
 .sent-message {
+    clear: both;
     float: right;
     background-color: rgb(69, 74, 222);
-    width: 75%;
+    width: fit-content;
+    max-width: 75%;
     margin-bottom: 8px;
     margin-top: 8px;
-    padding: 15px 20px 15px 20px;
+    padding: 8px 18px 8px 18px;
     border-radius: 25px;
-    line-height: 1rem;
+    font-size: 0.9rem;
+    line-height: 1.4rem;
     color: rgb(230, 229, 250);
 }
 
 .yarn-send {
-    position: absolute;
+    position: fixed;
     bottom: 0;
-    left: 0;
+    left: 450px;
     right: 0;
     height: 60px;
-    width: 100%;
+    width: calc(100% - 450px);
 
     padding: 0 15px 0 15px;
     box-sizing: border-box;
@@ -301,12 +399,9 @@ html {
     z-index: 2;
 }
 
-.add-media {
-    height: 35px;
-    width: 35px;
-    box-sizing: border-box;
-    background: url(../media/nav-icons/nav_new_active.svg) no-repeat center;
-    background-size: contain;
+.yarn-send > .material-icons {
+    color: rgb(69,74,222);
+    font-size: 2rem;
 }
 
 .message-field {
@@ -317,12 +412,4 @@ html {
     background-color: rgba(233, 236, 244, 0.35);
     padding: 0 10px 0 10px;
     -webkit-backdrop-filter: blur(25px);
-}
-
-.send-button {
-    height: 35px;
-    width: 35px;
-    box-sizing: border-box;
-    background: url(../media/send_icon.svg) no-repeat center;
-    background-size: contain;
 }
