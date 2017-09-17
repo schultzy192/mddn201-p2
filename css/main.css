@@ -12,24 +12,25 @@ html {
 /*  --- Sidebar Styling --- */
 
 .sidebar {
+    position: fixed;
     background-color: #FFF;
-    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
-    width: 450px;
+    width: 350px;
     /*min-width: 350px;*/
     border-right: solid 1px rgb(214, 215, 215);
+    overflow: scroll;
 }
 
 .sidebar-head {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    right: 0;
+    width: 350px;
     height: 75px;
 
-    background-color: rgba(250,250,250,0.2);
+    background-color: rgba(250,250,250,0.75);
     border-bottom: solid 1px rgb(214,215,215);
     -webkit-backdrop-filter: blur(25px);
     z-index: 2;
@@ -42,7 +43,7 @@ html {
     margin-left: 25px;
     margin-right: 25px;
 
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #454ADE;
     border-bottom: solid 3px #454ADE;
 }
@@ -61,7 +62,7 @@ html {
 .sidebar-yarn {
     margin-top: 0;
     margin-bottom: 0;
-    height: 100px;
+    height: 80px;
     width: 100%;
     display: flex;
 
@@ -80,8 +81,8 @@ html {
     border: solid 1px rgb(214,215,215);
     box-shadow: 0px 2px 10px 0 rgba(80,90,90,0.2);
     background-color: red;
-    width: 80px;
-    height: 80px;
+    width: 60px;
+    height: 60px;
     display: inline-block;
 
     background-position: center;
@@ -111,7 +112,8 @@ html {
 }
 
 .sidebar .active-yarn {
-    background-color: rgb(226, 226, 230);
+    background-color: rgb(245, 245, 251);
+    box-shadow: inset 5px 0px 0px 0px rgb(69, 74, 222);
 }
 
 .yarn-details {
@@ -122,12 +124,12 @@ html {
 .sidebar-yarn h3 {
     margin-top: 20px;
     margin-bottom: -10px;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: rgb(40,50,45);
 }
 
-.yarn-details > div {
-    margin-top: 0;
+.yarn-flags {
+    margin-top: -20px;
 }
 
 .spoiler-flag {
@@ -165,13 +167,13 @@ html {
     position: fixed;
     bottom: 0;
     left: 0;
-    width: 450px;
-    height: 60px;
+    width: 350px;
+    height: 50px;
 
     padding: 0 20px 0 20px;
     box-sizing: border-box;
     border-top: solid 1px rgb(214,215,215);
-    background-color: rgba(250,250,250, 0.2);
+    background-color: rgba(250,250,250, 0.75);
 
     display: flex;
     flex-direction: row;
@@ -186,14 +188,14 @@ html {
 }
 
 .nav-icon {
-    height: 35px;
-    width: 35px;
+    height: 32px;
+    width: 32px;
     box-sizing: border-box;
 }
 
 .active {
     border-top: solid 3px #454ADE;
-    height: 60px;
+    height: 50px;
 }
 
 .nav-recent {
@@ -229,7 +231,7 @@ html {
     bottom: 0;
     right: 0;
     width: 75%;
-    max-width: calc(100% - 450px);
+    max-width: calc(100% - 350px);
 }
 
 .active-yarn {
@@ -239,13 +241,13 @@ html {
 .yarn-title {
     position: fixed;
     top: 0;
-    left: 450px;
+    left: 350px;
     right: 0;
     height: 75px;
 
     border-bottom: solid 1px rgb(214,215,215);
     border-left: solid 1px rgb(214,215,215);
-    background-color: rgba(250,250,250, 0.2);
+    background-color: rgba(250,250,250, 0.75);
     -webkit-backdrop-filter: blur(10px);
 
     z-index: 2;
@@ -258,17 +260,18 @@ html {
     margin-left: 25px;
     margin-right: 25px;
 
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #454ADE;
     border-bottom: solid 3px #454ADE;
     z-index: 2;
 }
 
 .yarn-thread {
+    /*height: auto;*/
     margin-top: 85px;
     margin-left: 25px;
     margin-right: 25px;
-    bottom: 60px;
+    margin-bottom: 60px;
     overflow-y: scroll;
 }
 
@@ -279,8 +282,7 @@ html {
     float: left;
     width: 100%;
     background-color: rgb(245, 245, 251);
-    border-top: solid 1px rgb(69, 74, 222);
-    border-bottom: solid 1px rgb(69, 74, 222);
+    border-radius: 20px;
     padding: 0px 15px 10px 15px;
     box-sizing: border-box;
 
@@ -349,9 +351,9 @@ html {
     background-color: rgb(221, 221, 238);
     width: fit-content;
     max-width: 75%;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    padding: 8px 18px 8px 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px 12px 5px 12px;
     border-radius: 25px;
     font-size: 0.9rem;
     line-height: 1.4rem;
@@ -364,26 +366,35 @@ html {
     background-color: rgb(69, 74, 222);
     width: fit-content;
     max-width: 75%;
-    margin-bottom: 8px;
-    margin-top: 8px;
-    padding: 8px 18px 8px 18px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    padding: 5px 12px 5px 12px;
     border-radius: 25px;
     font-size: 0.9rem;
     line-height: 1.4rem;
     color: rgb(230, 229, 250);
 }
 
+.received-message:last-of-type {
+    margin-bottom: 70px;
+}
+
+.sent-message:last-of-type {
+    margin-bottom: 70px;
+}
+
 .yarn-send {
     position: fixed;
     bottom: 0;
-    left: 450px;
+    left: 350px;
     right: 0;
-    height: 60px;
-    width: calc(100% - 450px);
+    height: 50px;
+    margin-top: 60px;
+    width: calc(100% - 350px);
 
     padding: 0 15px 0 15px;
     box-sizing: border-box;
-    background-color: rgba(250,250,250, 0.2);
+    background-color: rgba(250,250,250, 0.75);
     border-left: solid 1px rgb(214,215,215);
     border-top: solid 1px rgb(214,215,215);
 
@@ -404,12 +415,36 @@ html {
     font-size: 2rem;
 }
 
+.send-message {
+    cursor: pointer;
+}
+
 .message-field {
     width: calc(100% - 110px);
-    height: 38px;
-    border: solid 1px rgb(214,215,215);
+    height: 32px;
+    border: solid 1px rgb(194,195,195);
     border-radius: 12px;
     background-color: rgba(233, 236, 244, 0.35);
     padding: 0 10px 0 10px;
     -webkit-backdrop-filter: blur(25px);
+}
+
+.star-wars-yarn {
+    display: none;
+}
+
+.graphic-design-yarn {
+    display: none;
+}
+
+.the-expanse-yarn {
+    display: none;
+}
+
+.the-joy-of-painting-yarn {
+    display: none;
+}
+
+.argument-clinic-yarn {
+    display: none;
 }
