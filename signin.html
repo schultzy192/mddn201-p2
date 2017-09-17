@@ -21,20 +21,26 @@
 <body>
     <div class="page-container">
 
-        <div class="main-logo"></div>
-        <div class="unavailable">
-            <i class="material-icons">warning</i>
-            <h4>Yarn sign in is currently unavailable.</h4>
-            <p>Click "Sign in as a Guest User" to preview Yarn without creating an account or logging in.</p>
-        </div>
-        <div class="login-form">
-            <input type="text" placeholder="Email"></input>
-            <input type="password" placeholder="Password"></input>
-            <h5 class="login button">Sign In...</h5>
-            <h5 class="guest-login button">Sign in as Guest User...</h5>
-        </div>
+        <div class="login-background"></div>
 
-        <h6 class="copyright">&copy; 2017, Yarn. All rights reserved.</h6>
+        <div class="login-container layer-1" data-offset="10">
+            <div class="main-logo"></div>
+            <div class="unavailable">
+                <i class="material-icons">warning</i>
+                <h4>Yarn sign in is currently unavailable.</h4>
+                <p>Click "Sign in as a Guest User" to preview Yarn without creating an account or logging in.</p>
+            </div>
+            <div class="login-form">
+                <input type="text" placeholder="Email"></input>
+                <input type="password" placeholder="Password"></input>
+                <div class="login-button-container">
+                    <h5 class="login-button button">Sign In...</h5>
+                    <a href="yarn.html"><h5 class="guest-login button">Sign in as Guest User...</h5></a>
+                </div>
+            </div>
+
+            <h6 class="copyright">&copy; 2017, Yarn. All rights reserved.</h6>
+        </div>
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
