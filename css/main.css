@@ -406,7 +406,7 @@ html {
     transition: 0.2s;
 }
 
-.sign-in-error > i, h5 {
+.sign-in-error > i, .sign-in-error > h5 {
     color: rgb(255,72,0);
 }
 

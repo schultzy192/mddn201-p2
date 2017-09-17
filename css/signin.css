@@ -1,0 +1,55 @@
+.main-logo {
+    margin-left: calc(50vw - 500px);
+    margin-top: calc(50vh - 150px);
+    width: 150px;
+    height: 150px;
+    background-image: url(../media/yarn-logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    float: left;
+}
+
+.login-form {
+    margin-top: 100px;
+    width: 50%;
+    float: right;
+}
+
+.unavailable {
+    width: 40%;
+    margin-right: 7.5%;
+    margin-left: 7.5%;
+    margin-top: 5%;
+    padding: 15px;
+    box-sizing: border-box;
+    border: solid 1px rgb(255,72,0);
+    border-radius: 20px;
+    float: right;
+    height: 200px;
+    background-color: rgba(255,72,0,0.25);
+}
+
+input {
+    width: calc(100% - 110px);
+    margin-top: 10px;
+    margin-bottom: 10px;
+    height: 50px;
+    border: solid 1px rgb(194,195,195);
+    border-radius: 12px;
+    background-color: rgba(233, 236, 244, 0.35);
+    padding: 0 10px 0 10px;
+    -webkit-backdrop-filter: blur(25px);
+}
+
+.button {
+    display: inline-block;
+    width: 25%;
+
+}
+
+.copyright {
+    position: fixed;
+    bottom: 0;
+    left: 150px;
+}
