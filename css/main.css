@@ -5,6 +5,10 @@ html {
   font-size: 16px;
 }
 
+::-webkit-scrollbar {
+    display: none;
+}
+
 .page-container {
     overflow: hidden;
 }
