@@ -111,4 +111,8 @@ $(document).ready(function() {
         }
     });
 
+    if (matchMedia('max-width: 720px').matches) {
+        $(".sidebar-head > h1").css("color","aqua");
+    }
+
 });
