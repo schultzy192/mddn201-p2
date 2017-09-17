@@ -105,4 +105,10 @@ $(document).ready(function() {
         $(".message-field").val("");
     });
 
+    $(".message-field").keyup(function(event){
+        if(event.keyCode == 13){
+            $(".send-message").click();
+        }
+    });
+
 });

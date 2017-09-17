@@ -35,8 +35,9 @@ body, html {
 }
 
 .main-logo {
-    margin-left: calc(50% - 75px);
-    width: 150px;
+    margin-top: 80px;
+    margin-left: calc(50% - 125px);
+    width: 250px;
     height: 150px;
     background-image: url(../media/yarn-logo.png);
     background-repeat: no-repeat;
@@ -46,6 +47,7 @@ body, html {
 
 .login-form {
     margin-top: 10px;
+    margin-bottom: 20px;
     width: 100%;
 }
 
@@ -111,6 +113,7 @@ input {
 }
 
 .copyright {
+    margin-top: 30px;
     width: 100%;
     text-align: center;
     color: rgb(70,80,80);
